@@ -20,6 +20,10 @@ function twoSum(number, target) {
     if(numberToIndex.hasOwnProperty(complement)) {
       return [numberToIndex[complement], i]
     }
+// Or use this
+    if(complement in numberToIndex) {
+      return [numberToIndex[complement], i]
+    } 
     numberToIndex[number[i]] = i
   }
 }
